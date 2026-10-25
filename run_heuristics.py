@@ -35,7 +35,7 @@ from pathlib import Path
 import highspy
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data" / "processed"
 OUT = ROOT / "results" / "generated" / "heuristics"
 EPS = 1e-6

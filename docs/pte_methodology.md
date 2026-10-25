@@ -25,15 +25,19 @@ From the repository root, activate the PTE environment created with `requirement
 ```bash
 python scripts/pte/run_pte_experiments.py --suffix .final
 python scripts/pte/run_pte_experiments.py --pattern instance_random_timewindow_Large.input.pkl --suffix .final600 --solve-limit 600
-python scripts/pte/count_complete_pte.py
+python scripts/pte/count_complete_native.py
 python scripts/pte/run_pte_benchmarks.py --repeats 3
 python scripts/pte/run_dense_validation.py
 python scripts/pte/check_pte_implementation.py
 python scripts/pte/analyse_pte_experiments.py
 ```
 
-The final analysis expects completed main records, exact count records, paired benchmark records, and dense-validation records. For the independent native count, compile `scripts/pte/count_pte_native.cpp` with a C++17 compiler and then run `scripts/pte/count_complete_native.py`.
+The native counter automatically compiles `count_pte_native.cpp` with a C++17 compiler (`c++`, or the `CXX` command). It computes complete sizes for all nine instances without the Python counter's per-commodity limit. Only complete records with matching input hashes are reused; partial, malformed or legacy records without a source hash are recomputed. `--force` requests fresh counts.
+
+`count_complete_pte.py` remains available for small diagnostics. A limited run writes `.counts.partial.json` and returns a nonzero exit status. The final analysis requires complete counts for every commodity and rejects incomplete records before writing report tables. It also needs main-run records (including representation-limit outcomes), paired benchmarks and dense-validation records.
 
 `analyse_pte_experiments.py` writes derived tables, figures, and `summary.json` to `results/generated/pte_experiments/`. It does not refresh the checked-in snapshots under `results/`; review and copy report-facing outputs explicitly when updating those snapshots.
 
 HiGHS solver time and peak memory vary by machine. Reproduced statuses and feasibility should be interpreted together with the resource limits and residual checks. Rounded objective matches alone do not establish optimality.
+
+Historical PTE records identify Python 3.12.14, HiGHS 1.15.1 and NumPy 2.5.4. The commands above read pickle caches; historical main experiments read Excel. For matching input timing, use the Excel-input alternatives in the root README. Tables include `input_mode`, and the runtime chart labels the actual input mode. `total_seconds` is input + pruning + LP construction + LP solve, excluding separately recorded validation/export overhead. Compare timings only with these definitions and input modes aligned.

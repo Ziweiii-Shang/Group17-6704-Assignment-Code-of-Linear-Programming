@@ -1,6 +1,8 @@
 .venv/
+.venv-pte/
 __pycache__/
 *.py[cod]
 .pytest_cache/
 scripts/pte/count_pte_native
+scripts/pte/count_pte_native.exe
 results/generated/

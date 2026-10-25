@@ -1,4 +1,5 @@
 import gc
+import argparse
 import json
 from pathlib import Path
 import pickle
@@ -6,6 +7,9 @@ from types import SimpleNamespace
 from run_pte_experiments import DEFAULT_INPUT, OUT, run
 
 args=SimpleNamespace(max_edges=8_000_000,max_states=3_000_000,preprocess_limit=180,solve_limit=180)
+parser=argparse.ArgumentParser(description='Compare one full-lattice TE and PTE solve per instance.')
+parser.add_argument('--force',action='store_true',help='Ignore saved validation records and solve again')
+options=parser.parse_args()
 results=[]
 for path in sorted(Path(DEFAULT_INPUT).glob('*.input.pkl')):
     instance_name = path.name[:-len('.input.pkl')]
@@ -16,8 +20,10 @@ for path in sorted(Path(DEFAULT_INPUT).glob('*.input.pkl')):
     pair={}
     for method in ['dense_te','pte']:
         target=OUT/f'{instance_name}.{method}.densecheck.json'
-        if target.exists():
+        if target.exists() and not options.force:
             result=json.loads(target.read_text())
+            if result.get('source_sha256') != data['source_sha256']:
+                raise ValueError(f'{instance_name}: saved {method} record belongs to a different source workbook; rerun with --force')
         else:
             result=run(path,args,cached=True,subset=[k],method=method,suffix='.densecheck')
         pair[method]=result

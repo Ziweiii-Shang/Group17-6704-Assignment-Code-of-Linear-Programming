@@ -1,0 +1,13 @@
+{
+  "instances": 9,
+  "mean_kn_gap_cg_pct": 0.6928893415526296,
+  "mean_ga_gap_cg_pct": 1.0502228793241573,
+  "mean_kn_recorded_time_reduction_pct": 89.17837141147842,
+  "mean_kn_time_reduction_using_table_rounded_times_pct": 89.17268680194987,
+  "kn_runtime_scope": "search only; excludes pool construction",
+  "ga_runtime_scope": "search across all three seeds; excludes pool construction",
+  "comparison_scope": "recorded runtimes, not a same-machine controlled speedup",
+  "cg_input": "results/cg_original.xlsx",
+  "heuristic_input": "results",
+  "pte_input": "results"
+}

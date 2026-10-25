@@ -1,0 +1,6 @@
+instance,demands,commodity_indices,variables,constraints,objective,solve_seconds,peak_rss_gib,status,source
+instance_random_timewindow_small,1,29,368769,727201,169.6110,2.260,0.875,Optimal,Group17.pdf Table 3 (rounded reported values)
+instance_random_timewindow_small,2,29;179,854948,1505702,374.6880,4.944,1.806,Optimal,Group17.pdf Table 3 (rounded reported values)
+instance_random_timewindow_small,3,29;179;165,1520805,2351903,493.0854,8.700,2.952,Optimal,Group17.pdf Table 3 (rounded reported values)
+instance_random_timewindow_small,4,29;179;165;115,2398155,3264704,544.0954,12.914,4.323,Optimal,Group17.pdf Table 3 (rounded reported values)
+instance_random_timewindow_small,5,29;179;165;115;289,3776848,4310405,,,5.197,system_free_memory_guard,Group17.pdf Table 3 (rounded reported values)

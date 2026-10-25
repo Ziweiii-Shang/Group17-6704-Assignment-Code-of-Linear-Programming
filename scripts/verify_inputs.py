@@ -4,6 +4,12 @@ import pickle
 import re
 from pathlib import Path
 
+# The caches contain NumPy arrays, so unpickling requires NumPy.
+try:
+    import numpy
+except ModuleNotFoundError as exc:
+    raise SystemExit('Input verification requires NumPy; install requirements-pte.txt first.') from exc
+
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
 CACHE = ROOT / "data" / "processed"

@@ -3,6 +3,7 @@ import csv
 import json
 from pathlib import Path
 import statistics
+from count_records import read_complete_count
 
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'results'/'generated'/'pte_experiments'
@@ -22,13 +23,17 @@ rows=[]
 for family in families:
     for size in sizes:
         stem=f'instance_{family}_timewindow_{size}'
-        c=json.loads((OUT/f'{stem}.counts.json').read_text())
         mainpath=OUT/f'{stem}.pte.final.json'
         if family=='random' and size=='Large':
             mainpath=OUT/f'{stem}.pte.final600.json'
         if not mainpath.exists():
             raise RuntimeError('Final main measurements are not complete')
         main=json.loads(mainpath.read_text())
+        c=read_complete_count(OUT/f'{stem}.counts.json', main['commodities'])
+        if c is None:
+            raise RuntimeError(f'{stem}: complete counts required; run scripts/pte/count_complete_native.py. Partial counts cannot be used in report tables.')
+        if c.get('source_sha256') is not None and c['source_sha256'] != main['source_sha256']:
+            raise RuntimeError(f'{stem}: counts and main experiment use different source workbooks')
         if main['status']=='complete':
             assert (c['states'],c['transport'],c['sink'])==(main['states'],main['transport'],main['sink'])
         full=c['full_transport']+c['full_sink']
@@ -42,7 +47,11 @@ for family in families:
              'bound_reduction_pct':100*(1-bound/full),'reachability_reduction_pct':100*(1-final/bound),
              'total_reduction_pct':100*(1-final/full),'variable_compression':full/final,
              'decimal_orders_removed':np.log10(full/final),
-             'native_count_seconds':c['count_seconds'],'main_status':main.get('lp_status',main['status']),
+             'count_implementation':c.get('count_implementation','not recorded'),
+             'count_seconds':c['count_seconds'],
+             'native_count_seconds':c['count_seconds'] if c.get('count_implementation')=='C++ bitmap/queue' else None,
+             'main_status':main.get('lp_status',main['status']),
+             'input_mode':main.get('input_mode','not recorded'),
              'input_seconds':main['input_seconds'],'bounds_seconds':main['bounds_seconds'],
              'expansion_seconds':main['expansion_seconds'],'backward_seconds':main.get('backward_seconds'),
              'preprocess_seconds':main['preprocess_seconds'],'build_seconds':main.get('build_seconds'),
@@ -90,8 +99,10 @@ ax.grid(axis='y',alpha=.2)
 fig.tight_layout();fig.savefig(FIG/'model_size.png',dpi=180);plt.close(fig)
 
 random=[r for r in rows if r['family']=='random']
+input_modes={r['input_mode'] for r in random}
+input_label='Excel input' if input_modes=={'xlsx'} else 'Cache input' if input_modes=={'pickle_cache'} else 'Input (mixed/unspecified)'
 fig,ax=plt.subplots(figsize=(8,4.5));bottom=np.zeros(3)
-for key,label,color in [('input_seconds','Excel input','#555555'),('preprocess_seconds','Pruning','#257d78'),
+for key,label,color in [('input_seconds',input_label,'#555555'),('preprocess_seconds','Pruning','#257d78'),
                         ('build_seconds','LP construction','#a57826'),('solve_seconds','HiGHS solve','#825373')]:
     vals=np.array([r[key] for r in random]);ax.bar(range(3),vals,bottom=bottom,label=label,color=color);bottom+=vals
 ax.set_xticks(range(3),[r['size'].title() for r in random]);ax.set_ylabel('Elapsed time (seconds)')

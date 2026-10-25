@@ -13,7 +13,10 @@ import os
 from pathlib import Path
 import pickle
 import platform
-import resource
+try:
+    import resource
+except ImportError:  # Windows uses psutil's peak working set.
+    resource = None
 import time
 
 import highspy
@@ -25,6 +28,14 @@ from openpyxl import load_workbook
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT = ROOT / 'data' / 'processed'
 OUT = ROOT / 'results' / 'generated' / 'pte_experiments'
+
+
+def peak_rss_bytes():
+    if resource is not None:
+        peak = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+        return int(peak if platform.system() == 'Darwin' else peak * 1024)
+    memory = psutil.Process().memory_info()
+    return int(getattr(memory, 'peak_wset', memory.rss))
 
 
 def millis(value):
@@ -332,7 +343,8 @@ def run(path, args, cached=False, subset=None, method='pte', suffix=''):
     is_cache = path.name.endswith('.input.pkl')
     instance_name = path.name[:-len('.input.pkl')] if is_cache else path.stem
     cache = path if is_cache else ROOT / 'data' / 'processed' / f'{instance_name}.input.pkl'
-    if (cached or is_cache) and cache.exists():
+    use_cache = (cached or is_cache) and cache.exists()
+    if use_cache:
         with cache.open('rb') as f:
             data = pickle.load(f)
         actual_input = time.perf_counter() - started
@@ -353,7 +365,7 @@ def run(path, args, cached=False, subset=None, method='pte', suffix=''):
               'config': data['config'], 'nodes': len(data['nodes']), 'arcs': len(data['arcs']),
               'commodities': len(indices), 'commodity_indices': indices,
               'same_od_commodities': sum(data['commodities'][k][1] == data['commodities'][k][2] for k in indices),
-              'input_seconds': actual_input, 'input_mode': 'pickle_cache' if cached else 'xlsx',
+              'input_seconds': actual_input, 'input_mode': 'pickle_cache' if use_cache else 'xlsx',
               'original_xlsx_input_seconds': data['input_seconds'],
               'bounds_seconds': bound_seconds, **counts, **expansion,
               'bound_records': bound_records,
@@ -369,7 +381,7 @@ def run(path, args, cached=False, subset=None, method='pte', suffix=''):
     result['preprocess_seconds'] = result['bounds_seconds'] + result['expansion_seconds'] + result.get('backward_seconds', 0)
     result['total_seconds'] = result['input_seconds'] + result['preprocess_seconds'] + result.get('build_seconds', 0) + result.get('solve_seconds', 0)
     result['observed_wall_seconds'] = time.perf_counter() - started
-    result['peak_process_rss_bytes'] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    result['peak_process_rss_bytes'] = peak_rss_bytes()
     result['environment'] = {'os': platform.platform(), 'machine': platform.machine(),
                              'python': platform.python_version(), 'highs': highspy.Highs().version(),
                              'numpy': np.__version__, 'logical_cpus': psutil.cpu_count(),

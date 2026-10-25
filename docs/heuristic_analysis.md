@@ -1,4 +1,4 @@
-> 本文保留原始六路径 GA 分析。corridor middle / Large 的后续可行调参结果请见 `../results/heuristics/results_ga_retuned.json`；合并表为 `../results/heuristics/results_with_retuned_ga.csv`。
+> 本文保留原始六路径 GA 分析。corridor middle / Large 的后续可行调参结果请见 `../results/results_ga_retuned.json`；合并表为 `../results/results_with_retuned_ga.csv`。
 
 # 启发式实验：k-邻域搜索与遗传算法
 

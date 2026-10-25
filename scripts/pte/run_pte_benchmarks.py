@@ -14,6 +14,7 @@ def main():
     parser.add_argument('--input', type=Path, default=DEFAULT_INPUT)
     parser.add_argument('--pattern', default='*.input.pkl')
     parser.add_argument('--repeats', type=int, default=3)
+    parser.add_argument('--force', action='store_true', help='Rerun all LP pairs even if result files exist')
     args = parser.parse_args()
     settings = SimpleNamespace(max_edges=5_000_000, max_states=2_500_000,
                                preprocess_limit=180, solve_limit=180)
@@ -31,8 +32,10 @@ def main():
             for method in methods:
                 suffix = f'.subset20.r{rep + 1}'
                 output = OUT / f'{instance_name}.{method}{suffix}.json'
-                if output.exists():
+                if output.exists() and not args.force:
                     result = json.loads(output.read_text())
+                    if result.get('source_sha256') != data['source_sha256'] or result.get('commodity_indices') != indices:
+                        raise ValueError(f'{output.name}: saved benchmark does not match this input/subset; rerun with --force')
                 else:
                     result = run(path, settings, cached=True, subset=indices, method=method, suffix=suffix)
                 results[method] = result

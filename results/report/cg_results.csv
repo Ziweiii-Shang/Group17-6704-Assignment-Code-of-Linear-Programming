@@ -1,0 +1,10 @@
+instance,cg_objective,cg_seconds,cg_columns,source_label,source,source_sha256
+instance_corridor_timewindow_small,262949.3844,10.1304,1729,L1-3,cg_original.xlsx:Sheet1!A4:D4,5746ae1b6fe57ea3015def6a634668103b8985bd11b0de21f17b8b530e3ad14b
+instance_corridor_timewindow_middle,720417.8264,63.1917,3164,L1-2,cg_original.xlsx:Sheet1!A3:D3,5746ae1b6fe57ea3015def6a634668103b8985bd11b0de21f17b8b530e3ad14b
+instance_corridor_timewindow_Large,888126.2861,153.3864,4622,L1-1,cg_original.xlsx:Sheet1!A2:D2,5746ae1b6fe57ea3015def6a634668103b8985bd11b0de21f17b8b530e3ad14b
+instance_hub_timewindow_small,110924.3461,5.6274,886,M1-3,cg_original.xlsx:Sheet1!A7:D7,5746ae1b6fe57ea3015def6a634668103b8985bd11b0de21f17b8b530e3ad14b
+instance_hub_timewindow_middle,223516.2483,29.0374,2106,M1-2,cg_original.xlsx:Sheet1!A6:D6,5746ae1b6fe57ea3015def6a634668103b8985bd11b0de21f17b8b530e3ad14b
+instance_hub_timewindow_Large,341601.0396,72.381,2843,M1-1,cg_original.xlsx:Sheet1!A5:D5,5746ae1b6fe57ea3015def6a634668103b8985bd11b0de21f17b8b530e3ad14b
+instance_random_timewindow_small,123886.8906,5.382,671,S1-3,cg_original.xlsx:Sheet1!A10:D10,5746ae1b6fe57ea3015def6a634668103b8985bd11b0de21f17b8b530e3ad14b
+instance_random_timewindow_middle,243121.4156,21.5713,1314,S1-2,cg_original.xlsx:Sheet1!A9:D9,5746ae1b6fe57ea3015def6a634668103b8985bd11b0de21f17b8b530e3ad14b
+instance_random_timewindow_Large,373721.3996,52.7578,1970,S1-1,cg_original.xlsx:Sheet1!A8:D8,5746ae1b6fe57ea3015def6a634668103b8985bd11b0de21f17b8b530e3ad14b
