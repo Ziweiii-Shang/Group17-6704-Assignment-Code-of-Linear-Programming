@@ -1,46 +1,63 @@
-# Capacitated Rail Freight Routing with Time Windows
+# COMP6704 Group 17: Linear Programming
 
-Group 17 / 6704 project: minimum-cost multicommodity rail routing with divisible freight, shared physical-arc capacities, and commodity-specific travel-time limits. The repository brings together genetic and k-neighborhood heuristics, Pruned Time-Expanded LP (PTE-LP) experiment records, and a CPLEX-based column-generation implementation.
+This repository contains our rail freight routing methods and experiment records. Freight can be split across routes; the model minimizes cost subject to shared arc capacities and a travel-time limit for each commodity.
 
-## Repository structure
+## Methods
 
-```text
-src/# Baseline heuristics and GA retuning scripts# Column generation with exact RCSP pricing
-data/                    # See paths below (no original Excel workbooks supplied)
-  processed/              # Nine validated instance caches (.input.pkl)
-  raw/                    # Place original Excel instances here for CG
-results/                   # Original, retuned, and combined result tables# PTE tables, plots, JSON, solver logs, and solutions
-docs/                     # Methodology, baseline analysis, and source checksums
-```
+- `column_generation.py`: path-based LP with CPLEX and resource-constrained shortest-path pricing.
+- `scripts/pte/`: exact pruned time-expanded LP, experiment and validation scripts.
+- `run_heuristics.py`, `run_ga_retune.py`: path-pool heuristics with HiGHS flow allocation.
 
-## Quick start
+## Setup
 
-Use Python 3.10+ in a virtual environment and run these commands from the repository root:
+For CG and heuristics, install the original dependencies in `requirements.txt` and use the same Python/CPLEX versions as the original experiments:
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\activate
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 python -m pip install -r requirements.txt
-python src/heuristics/run_heuristics.py --instances instance_random_timewindow_small --seeds 42
-python src/heuristics/run_heuristics.py   # All nine instances; seeds 42, 43, 44
-python src/heuristics/run_ga_retune.py   # Retuned corridor middle / Large
 ```
 
-New heuristic outputs go to `results/generated/heuristics/`; each run overwrites its generated result files. Archived results remain under `results/heuristics/`. The caches contain the data required by the heuristics; load pickle files only from trusted sources.
+Column generation also requires IBM CPLEX Optimization Studio, its Python API, and a valid license. CPLEX is not included in `requirements.txt`.
 
-Column generation additionally requires the IBM CPLEX Python API and an appropriate solver license (`python -m pip install cplex`). Supply an original workbook with `Arcs`, `Commodities`, and `Costs` sheets; required columns are documented in the source:
+PTE dependencies are pinned separately in `requirements-pte.txt`. Use a separate environment for PTE so its dependency versions do not change the CG and heuristic environment:
 
 ```bash
-python src/column_generation/column_generation.py --inputdata/raw/instance_corridor_timewindow_small.xlsx
+python -m venv .venv-pte
+source .venv-pte/bin/activate  # Windows: .venv-pte\Scripts\activate
+python -m pip install -r requirements-pte.txt
 ```
 
-The default CG output is `results/generated/column_generation/cg_result.xlsx` (summary, path flows, and iterations). Original Excel workbooks and CG result files were not supplied. PTE solver/counting/analysis scripts were also absent, so this repository preserves PTE results but cannot rerun that pipeline. See [PTE methodology](docs/pte_methodology.md).
+Nine validated instance caches are included in `data/processed/` for PTE and heuristics. The original Excel workbooks are not included; CG requires a workbook with `Arcs`, `Commodities`, and `Costs` sheets. Load pickle files only from trusted sources.
 
-## Results and interpretation
+## Run CG and heuristics
 
-- Nine instances cover random, corridor, and hub networks at three sizes. PTE-LP solved the three random instances optimally; corridor/hub hit representation limits, which do **not** establish infeasibility.
-- Baseline random-instance gaps are 0.30–0.50% for k-neighborhood and 0.36–0.71% for the six-path GA. The six-path GA leaves demand unmet on corridor middle/Large.
-- GA retuning increases those two path budgets to 10 and 16 and obtains feasible costs of **730,467.34** and **906,575.20**. [Combined results](results/heuristics/results_with_retuned_ga.csv) apply these updates; [baseline results](results/heuristics/results.csv) and [retuned records](results/heuristics/results_ga_retuned.json) remain separate.
-- PTE tables are in [main_results.csv](results/pte/summary/main_results.csv); figures are in [results/pte/figures/](results/pte/figures/). Compare feasibility alongside cost; missing objectives are not zero, and recorded runtimes do not establish cross-method speedups.
+```bash
+python run_heuristics.py
+python run_ga_retune.py
+```
 
-[Baseline analysis](docs/heuristic_analysis.md) describes the original six-path GA only. [Source manifest](docs/source_manifest.json) records original paths and SHA-256 checksums; three copied Python files received path/CLI changes. Dependencies in `requirements.txt` are unpinned; the original PTE environment pins are retained separately in `docs/pte_original_requirements.txt` as historical metadata. No license has been assigned; choose one before granting reuse rights.
+When the original workbook and CPLEX are available:
+
+```bash
+python column_generation.py --input path/to/instance.xlsx
+```
+
+## Run PTE
+
+Activate `.venv-pte` before running these commands. The full-instance run uses a 180-second solver limit; the report's completed Random-Large run uses 600 seconds.
+
+```bash
+python scripts/pte/run_pte_experiments.py --suffix .final
+python scripts/pte/run_pte_experiments.py \
+  --pattern instance_random_timewindow_Large.input.pkl \
+  --suffix .final600 --solve-limit 600
+
+python scripts/pte/count_complete_pte.py
+python scripts/pte/run_pte_benchmarks.py --repeats 3
+python scripts/pte/run_dense_validation.py
+python scripts/pte/check_pte_implementation.py
+python scripts/pte/analyse_pte_experiments.py
+```
+
+PTE scripts write new files to `results/generated/pte_experiments/`; existing result files are preserved. Corridor and Hub full-instance runs may stop at the model representation limit before optimization. This is a resource limit, not an infeasibility result. Experiment definitions and limits are described in [docs/pte_methodology.md](docs/pte_methodology.md). Python and solver runtimes can vary by machine.

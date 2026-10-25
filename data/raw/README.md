@@ -1,6 +1,6 @@
 # Original instance workbooks
 
-The supplied materials contain nine validated pickle caches, but no original `.xlsx` workbooks. Heuristics read `../processed/`; column generation requires the original Excel files here (or an explicit path through `--input`). Do not rename caches to Excel files.
+The original `.xlsx` workbooks are not included. Nine validated pickle caches are stored in `../processed/` for the heuristics and PTE-LP. Column generation requires an authorized workbook copy.
 
 The CG reader requires these sheets and columns:
 
