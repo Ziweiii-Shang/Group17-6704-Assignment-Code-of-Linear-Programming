@@ -1,0 +1,6 @@
+# Runnable heuristics and Excel I/O for column generation.
+# Install the IBM CPLEX Python API separately for column generation.
+highspy
+numpy
+pandas
+openpyxl
