@@ -5,15 +5,11 @@ Group 17 / 6704 project: minimum-cost multicommodity rail routing with divisible
 ## Repository structure
 
 ```text
-src/
-  heuristics/             # Baseline heuristics and GA retuning scripts
-  column_generation/      # Column generation with exact RCSP pricing
+src/# Baseline heuristics and GA retuning scripts# Column generation with exact RCSP pricing
 data/                    # See paths below (no original Excel workbooks supplied)
   processed/              # Nine validated instance caches (.input.pkl)
   raw/                    # Place original Excel instances here for CG
-results/
-  heuristics/             # Original, retuned, and combined result tables
-  pte/{summary,figures,raw}/ # PTE tables, plots, JSON, solver logs, and solutions
+results/                   # Original, retuned, and combined result tables# PTE tables, plots, JSON, solver logs, and solutions
 docs/                     # Methodology, baseline analysis, and source checksums
 ```
 
