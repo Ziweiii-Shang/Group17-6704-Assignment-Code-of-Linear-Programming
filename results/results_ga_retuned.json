@@ -1,0 +1,186 @@
+[
+  {
+    "instance": "instance_corridor_timewindow_middle",
+    "family": "corridor",
+    "size": "middle",
+    "nodes": 150,
+    "arcs": 700,
+    "commodities": 600,
+    "method": "genetic",
+    "feasible": true,
+    "objective": 730467.3423723262,
+    "demand_short": 0.0,
+    "max_capacity_violation": 4.547473508864641e-13,
+    "max_time_violation": 0,
+    "seconds": 96.81610783299999,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 7.637568166013807,
+    "gap_percent": null,
+    "pool_seconds": 8.710143541999999,
+    "detail": {
+      "width": 10,
+      "previous_width": 6,
+      "population": 8,
+      "generations": 6,
+      "runs": [
+        {
+          "seed": 42,
+          "feasible": true,
+          "objective": 730719.2433540814,
+          "demand_short": 0.0,
+          "seconds": 31.620167916,
+          "generations": 6
+        },
+        {
+          "seed": 43,
+          "feasible": true,
+          "objective": 730467.3423723262,
+          "demand_short": 0.0,
+          "seconds": 32.23058775,
+          "generations": 6
+        },
+        {
+          "seed": 44,
+          "feasible": true,
+          "objective": 730662.4992161482,
+          "demand_short": 0.0,
+          "seconds": 32.964845541,
+          "generations": 6
+        }
+      ],
+      "chosen_seed": 43,
+      "widths_tried": [
+        {
+          "width": 10,
+          "feasible": true,
+          "objective": 730467.3423723262,
+          "demand_short": 0.0,
+          "seconds": 96.81610316599999,
+          "runs": [
+            {
+              "seed": 42,
+              "feasible": true,
+              "objective": 730719.2433540814,
+              "demand_short": 0.0,
+              "seconds": 31.620167916,
+              "generations": 6
+            },
+            {
+              "seed": 43,
+              "feasible": true,
+              "objective": 730467.3423723262,
+              "demand_short": 0.0,
+              "seconds": 32.23058775,
+              "generations": 6
+            },
+            {
+              "seed": 44,
+              "feasible": true,
+              "objective": 730662.4992161482,
+              "demand_short": 0.0,
+              "seconds": 32.964845541,
+              "generations": 6
+            }
+          ],
+          "chosen_seed": 43
+        }
+      ],
+      "pricing_rounds": 2,
+      "average_pool_paths": 12.87,
+      "max_pool_paths": 18
+    }
+  },
+  {
+    "instance": "instance_corridor_timewindow_Large",
+    "family": "corridor",
+    "size": "Large",
+    "nodes": 200,
+    "arcs": 1000,
+    "commodities": 900,
+    "method": "genetic",
+    "feasible": true,
+    "objective": 906575.2027465292,
+    "demand_short": 0.0,
+    "max_capacity_violation": 4.547473508864641e-13,
+    "max_time_violation": 0,
+    "seconds": 166.12997316699997,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 13.712152625899762,
+    "gap_percent": null,
+    "pool_seconds": 20.106542165999997,
+    "detail": {
+      "width": 16,
+      "previous_width": 6,
+      "population": 6,
+      "generations": 4,
+      "runs": [
+        {
+          "seed": 42,
+          "feasible": true,
+          "objective": 906575.2027465292,
+          "demand_short": 0.0,
+          "seconds": 55.020812625000005,
+          "generations": 4
+        },
+        {
+          "seed": 43,
+          "feasible": true,
+          "objective": 906589.960054278,
+          "demand_short": 0.0,
+          "seconds": 55.345143415999985,
+          "generations": 4
+        },
+        {
+          "seed": 44,
+          "feasible": true,
+          "objective": 906601.9485405403,
+          "demand_short": 0.0,
+          "seconds": 55.76324016699999,
+          "generations": 4
+        }
+      ],
+      "chosen_seed": 42,
+      "widths_tried": [
+        {
+          "width": 16,
+          "feasible": true,
+          "objective": 906575.2027465292,
+          "demand_short": 0.0,
+          "seconds": 166.1299605,
+          "runs": [
+            {
+              "seed": 42,
+              "feasible": true,
+              "objective": 906575.2027465292,
+              "demand_short": 0.0,
+              "seconds": 55.020812625000005,
+              "generations": 4
+            },
+            {
+              "seed": 43,
+              "feasible": true,
+              "objective": 906589.960054278,
+              "demand_short": 0.0,
+              "seconds": 55.345143415999985,
+              "generations": 4
+            },
+            {
+              "seed": 44,
+              "feasible": true,
+              "objective": 906601.9485405403,
+              "demand_short": 0.0,
+              "seconds": 55.76324016699999,
+              "generations": 4
+            }
+          ],
+          "chosen_seed": 42
+        }
+      ],
+      "pricing_rounds": 4,
+      "average_pool_paths": 13.436666666666667,
+      "max_pool_paths": 19
+    }
+  }
+]

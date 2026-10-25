@@ -1,0 +1,1553 @@
+[
+  {
+    "instance": "instance_corridor_timewindow_Large",
+    "family": "corridor",
+    "size": "Large",
+    "nodes": 200,
+    "arcs": 1000,
+    "commodities": 900,
+    "method": "k-neighborhood",
+    "feasible": true,
+    "objective": 906575.2027465296,
+    "demand_short": 0.0,
+    "max_capacity_violation": 4.547473508864641e-13,
+    "max_time_violation": 0,
+    "seconds": 21.119929292000002,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 13.712152625899762,
+    "gap_percent": null,
+    "pool_seconds": 19.793404708999997,
+    "detail": {
+      "pricing_rounds": 4,
+      "average_pool_paths": 13.436666666666667,
+      "max_pool_paths": 19,
+      "first_feasible_k": 17,
+      "final_k": 19,
+      "history": [
+        {
+          "k": 1,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 10746.196000000004,
+          "paths": 900
+        },
+        {
+          "k": 2,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 10261.712000000001,
+          "paths": 1797
+        },
+        {
+          "k": 3,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 9763.550000000001,
+          "paths": 2692
+        },
+        {
+          "k": 4,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 8543.339,
+          "paths": 3587
+        },
+        {
+          "k": 5,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 6820.516000000001,
+          "paths": 4477
+        },
+        {
+          "k": 6,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 5202.623,
+          "paths": 5361
+        },
+        {
+          "k": 7,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 3885.87,
+          "paths": 6239
+        },
+        {
+          "k": 8,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 3146.8894999999998,
+          "paths": 7113
+        },
+        {
+          "k": 9,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 2242.328,
+          "paths": 7977
+        },
+        {
+          "k": 10,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 1032.9199999999994,
+          "paths": 8826
+        },
+        {
+          "k": 11,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 588.8432,
+          "paths": 9645
+        },
+        {
+          "k": 12,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 114.63000000000004,
+          "paths": 10407
+        },
+        {
+          "k": 13,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 82.49999999999989,
+          "paths": 11067
+        },
+        {
+          "k": 14,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 52.49999999999992,
+          "paths": 11576
+        },
+        {
+          "k": 15,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 18.499999999999837,
+          "paths": 11901
+        },
+        {
+          "k": 16,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 8.49999999999958,
+          "paths": 12045
+        },
+        {
+          "k": 17,
+          "feasible": true,
+          "objective": 907398.4582663164,
+          "demand_short": 0.0,
+          "paths": 12086
+        },
+        {
+          "k": 18,
+          "feasible": true,
+          "objective": 906575.2027465296,
+          "demand_short": 0.0,
+          "paths": 12092
+        },
+        {
+          "k": 19,
+          "feasible": true,
+          "objective": 906575.2027465296,
+          "demand_short": 0.0,
+          "paths": 12093
+        }
+      ]
+    }
+  },
+  {
+    "instance": "instance_corridor_timewindow_Large",
+    "family": "corridor",
+    "size": "Large",
+    "nodes": 200,
+    "arcs": 1000,
+    "commodities": 900,
+    "method": "genetic",
+    "feasible": false,
+    "objective": null,
+    "demand_short": 673.3219999999999,
+    "max_capacity_violation": 4.547473508864641e-13,
+    "max_time_violation": 0,
+    "seconds": 73.736297459,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 13.712152625899762,
+    "gap_percent": null,
+    "pool_seconds": 19.793404708999997,
+    "detail": {
+      "width": 6,
+      "runs": [
+        {
+          "seed": 42,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 907.2199999999996,
+          "seconds": 23.687195582999998,
+          "generations": 4
+        },
+        {
+          "seed": 43,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 865.9699999999998,
+          "seconds": 23.903106499999993,
+          "generations": 4
+        },
+        {
+          "seed": 44,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 673.3219999999999,
+          "seconds": 26.14552125,
+          "generations": 4
+        }
+      ],
+      "chosen_seed": 44
+    }
+  },
+  {
+    "instance": "instance_corridor_timewindow_middle",
+    "family": "corridor",
+    "size": "middle",
+    "nodes": 150,
+    "arcs": 700,
+    "commodities": 600,
+    "method": "k-neighborhood",
+    "feasible": true,
+    "objective": 727913.0201144766,
+    "demand_short": 0.0,
+    "max_capacity_violation": 4.547473508864641e-13,
+    "max_time_violation": 0,
+    "seconds": 8.726020833000007,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 7.637568166013807,
+    "gap_percent": null,
+    "pool_seconds": 8.708002707999995,
+    "detail": {
+      "pricing_rounds": 2,
+      "average_pool_paths": 12.87,
+      "max_pool_paths": 18,
+      "first_feasible_k": 12,
+      "final_k": 18,
+      "history": [
+        {
+          "k": 1,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 7404.725199999997,
+          "paths": 600
+        },
+        {
+          "k": 2,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 6460.669999999999,
+          "paths": 1196
+        },
+        {
+          "k": 3,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 5843.4213,
+          "paths": 1791
+        },
+        {
+          "k": 4,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 4496.1739,
+          "paths": 2384
+        },
+        {
+          "k": 5,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 3596.8339000000005,
+          "paths": 2975
+        },
+        {
+          "k": 6,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 2579.2664999999997,
+          "paths": 3566
+        },
+        {
+          "k": 7,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 1799.7965000000002,
+          "paths": 4152
+        },
+        {
+          "k": 8,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 1064.7425999999998,
+          "paths": 4737
+        },
+        {
+          "k": 9,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 481.10389999999995,
+          "paths": 5312
+        },
+        {
+          "k": 10,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 88.55390000000011,
+          "paths": 5877
+        },
+        {
+          "k": 11,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 4.540000000000003,
+          "paths": 6424
+        },
+        {
+          "k": 12,
+          "feasible": true,
+          "objective": 729361.1595921157,
+          "demand_short": 0.0,
+          "paths": 6916
+        },
+        {
+          "k": 13,
+          "feasible": true,
+          "objective": 728472.5281664574,
+          "demand_short": 0.0,
+          "paths": 7296
+        },
+        {
+          "k": 14,
+          "feasible": true,
+          "objective": 728231.7272641604,
+          "demand_short": 0.0,
+          "paths": 7543
+        },
+        {
+          "k": 15,
+          "feasible": true,
+          "objective": 728090.3041646496,
+          "demand_short": 0.0,
+          "paths": 7661
+        },
+        {
+          "k": 16,
+          "feasible": true,
+          "objective": 727922.8538916406,
+          "demand_short": 0.0,
+          "paths": 7706
+        },
+        {
+          "k": 17,
+          "feasible": true,
+          "objective": 727913.020114477,
+          "demand_short": 0.0,
+          "paths": 7719
+        },
+        {
+          "k": 18,
+          "feasible": true,
+          "objective": 727913.0201144766,
+          "demand_short": 0.0,
+          "paths": 7722
+        }
+      ]
+    }
+  },
+  {
+    "instance": "instance_corridor_timewindow_middle",
+    "family": "corridor",
+    "size": "middle",
+    "nodes": 150,
+    "arcs": 700,
+    "commodities": 600,
+    "method": "genetic",
+    "feasible": false,
+    "objective": null,
+    "demand_short": 211.96650000000008,
+    "max_capacity_violation": 3.410605131648481e-13,
+    "max_time_violation": 0,
+    "seconds": 60.72144500000002,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 7.637568166013807,
+    "gap_percent": null,
+    "pool_seconds": 8.708002707999995,
+    "detail": {
+      "width": 6,
+      "runs": [
+        {
+          "seed": 42,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 261.89056666666636,
+          "seconds": 20.273682292000018,
+          "generations": 6
+        },
+        {
+          "seed": 43,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 211.96650000000008,
+          "seconds": 20.348517208999993,
+          "generations": 6
+        },
+        {
+          "seed": 44,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 238.37130000000002,
+          "seconds": 20.098792625000016,
+          "generations": 6
+        }
+      ],
+      "chosen_seed": 43
+    }
+  },
+  {
+    "instance": "instance_corridor_timewindow_small",
+    "family": "corridor",
+    "size": "small",
+    "nodes": 100,
+    "arcs": 400,
+    "commodities": 300,
+    "method": "k-neighborhood",
+    "feasible": true,
+    "objective": 266388.2004,
+    "demand_short": 0.0,
+    "max_capacity_violation": 2.2737367544323206e-13,
+    "max_time_violation": 0,
+    "seconds": 2.026523124999983,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 3.4982830001972616,
+    "gap_percent": null,
+    "pool_seconds": 2.2640211249999993,
+    "detail": {
+      "pricing_rounds": 4,
+      "average_pool_paths": 12.22,
+      "max_pool_paths": 18,
+      "first_feasible_k": 11,
+      "final_k": 18,
+      "history": [
+        {
+          "k": 1,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 3768.57,
+          "paths": 300
+        },
+        {
+          "k": 2,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 3399.995000000001,
+          "paths": 598
+        },
+        {
+          "k": 3,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 2786.5099999999998,
+          "paths": 894
+        },
+        {
+          "k": 4,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 2265.3700000000003,
+          "paths": 1187
+        },
+        {
+          "k": 5,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 1978.02,
+          "paths": 1477
+        },
+        {
+          "k": 6,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 1480.02,
+          "paths": 1767
+        },
+        {
+          "k": 7,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 1049.15,
+          "paths": 2054
+        },
+        {
+          "k": 8,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 453.23999999999995,
+          "paths": 2334
+        },
+        {
+          "k": 9,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 26.804999999999865,
+          "paths": 2612
+        },
+        {
+          "k": 10,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 5.710000000000029,
+          "paths": 2873
+        },
+        {
+          "k": 11,
+          "feasible": true,
+          "objective": 267352.39650666656,
+          "demand_short": 0.0,
+          "paths": 3110
+        },
+        {
+          "k": 12,
+          "feasible": true,
+          "objective": 266725.8011782001,
+          "demand_short": 0.0,
+          "paths": 3300
+        },
+        {
+          "k": 13,
+          "feasible": true,
+          "objective": 266615.41995899996,
+          "demand_short": 0.0,
+          "paths": 3448
+        },
+        {
+          "k": 14,
+          "feasible": true,
+          "objective": 266454.8445894167,
+          "demand_short": 0.0,
+          "paths": 3552
+        },
+        {
+          "k": 15,
+          "feasible": true,
+          "objective": 266392.1599599999,
+          "demand_short": 0.0,
+          "paths": 3618
+        },
+        {
+          "k": 16,
+          "feasible": true,
+          "objective": 266388.35471799993,
+          "demand_short": 0.0,
+          "paths": 3649
+        },
+        {
+          "k": 17,
+          "feasible": true,
+          "objective": 266388.35471799993,
+          "demand_short": 0.0,
+          "paths": 3660
+        },
+        {
+          "k": 18,
+          "feasible": true,
+          "objective": 266388.2004,
+          "demand_short": 0.0,
+          "paths": 3666
+        }
+      ]
+    }
+  },
+  {
+    "instance": "instance_corridor_timewindow_small",
+    "family": "corridor",
+    "size": "small",
+    "nodes": 100,
+    "arcs": 400,
+    "commodities": 300,
+    "method": "genetic",
+    "feasible": true,
+    "objective": 271895.3272437502,
+    "demand_short": 0.0,
+    "max_capacity_violation": 2.2737367544323206e-13,
+    "max_time_violation": 0,
+    "seconds": 28.430309582999996,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 3.4982830001972616,
+    "gap_percent": null,
+    "pool_seconds": 2.2640211249999993,
+    "detail": {
+      "width": 6,
+      "runs": [
+        {
+          "seed": 42,
+          "feasible": true,
+          "objective": 274676.8319573046,
+          "demand_short": 0.0,
+          "seconds": 9.774491042000022,
+          "generations": 8
+        },
+        {
+          "seed": 43,
+          "feasible": true,
+          "objective": 271895.3272437502,
+          "demand_short": 0.0,
+          "seconds": 9.386736417000009,
+          "generations": 8
+        },
+        {
+          "seed": 44,
+          "feasible": true,
+          "objective": 273055.2927772498,
+          "demand_short": 0.0,
+          "seconds": 9.268647708999993,
+          "generations": 8
+        }
+      ],
+      "chosen_seed": 43
+    }
+  },
+  {
+    "instance": "instance_hub_timewindow_Large",
+    "family": "hub",
+    "size": "Large",
+    "nodes": 200,
+    "arcs": 1000,
+    "commodities": 900,
+    "method": "k-neighborhood",
+    "feasible": true,
+    "objective": 342373.20813740016,
+    "demand_short": 0.0,
+    "max_capacity_violation": 9.094947017729282e-13,
+    "max_time_violation": 0,
+    "seconds": 3.7502003749999915,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 57.62506533402484,
+    "gap_percent": null,
+    "pool_seconds": 6.692379791999997,
+    "detail": {
+      "pricing_rounds": 1,
+      "average_pool_paths": 6.108888888888889,
+      "max_pool_paths": 12,
+      "first_feasible_k": 5,
+      "final_k": 12,
+      "history": [
+        {
+          "k": 1,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 10949.380000000001,
+          "paths": 900
+        },
+        {
+          "k": 2,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 5460.143600000001,
+          "paths": 1796
+        },
+        {
+          "k": 3,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 1018.6344000000003,
+          "paths": 2665
+        },
+        {
+          "k": 4,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 494.71080000000006,
+          "paths": 3495
+        },
+        {
+          "k": 5,
+          "feasible": true,
+          "objective": 347506.0745886797,
+          "demand_short": 0.0,
+          "paths": 4215
+        },
+        {
+          "k": 6,
+          "feasible": true,
+          "objective": 343179.1368808401,
+          "demand_short": 0.0,
+          "paths": 4765
+        },
+        {
+          "k": 7,
+          "feasible": true,
+          "objective": 342685.5078646802,
+          "demand_short": 0.0,
+          "paths": 5141
+        },
+        {
+          "k": 8,
+          "feasible": true,
+          "objective": 342522.8577950401,
+          "demand_short": 0.0,
+          "paths": 5355
+        },
+        {
+          "k": 9,
+          "feasible": true,
+          "objective": 342416.32646668004,
+          "demand_short": 0.0,
+          "paths": 5451
+        },
+        {
+          "k": 10,
+          "feasible": true,
+          "objective": 342378.3100298399,
+          "demand_short": 0.0,
+          "paths": 5486
+        },
+        {
+          "k": 11,
+          "feasible": true,
+          "objective": 342373.20813740016,
+          "demand_short": 0.0,
+          "paths": 5496
+        },
+        {
+          "k": 12,
+          "feasible": true,
+          "objective": 342373.20813740016,
+          "demand_short": 0.0,
+          "paths": 5498
+        }
+      ]
+    }
+  },
+  {
+    "instance": "instance_hub_timewindow_Large",
+    "family": "hub",
+    "size": "Large",
+    "nodes": 200,
+    "arcs": 1000,
+    "commodities": 900,
+    "method": "genetic",
+    "feasible": true,
+    "objective": 343041.17959856027,
+    "demand_short": 0.0,
+    "max_capacity_violation": 1.8189894035458565e-12,
+    "max_time_violation": 0,
+    "seconds": 31.93041466699998,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 57.62506533402484,
+    "gap_percent": null,
+    "pool_seconds": 6.692379791999997,
+    "detail": {
+      "width": 6,
+      "runs": [
+        {
+          "seed": 42,
+          "feasible": true,
+          "objective": 343041.17959856027,
+          "demand_short": 0.0,
+          "seconds": 10.621308416000005,
+          "generations": 4
+        },
+        {
+          "seed": 43,
+          "feasible": true,
+          "objective": 343041.8284794399,
+          "demand_short": 0.0,
+          "seconds": 10.677818458000019,
+          "generations": 4
+        },
+        {
+          "seed": 44,
+          "feasible": true,
+          "objective": 343179.1368808401,
+          "demand_short": 0.0,
+          "seconds": 10.630731083,
+          "generations": 4
+        }
+      ],
+      "chosen_seed": 42
+    }
+  },
+  {
+    "instance": "instance_hub_timewindow_middle",
+    "family": "hub",
+    "size": "middle",
+    "nodes": 150,
+    "arcs": 700,
+    "commodities": 600,
+    "method": "k-neighborhood",
+    "feasible": true,
+    "objective": 224133.4468632099,
+    "demand_short": 0.0,
+    "max_capacity_violation": 9.094947017729282e-13,
+    "max_time_violation": 0,
+    "seconds": 1.3886500419999948,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 45.2611436258303,
+    "gap_percent": null,
+    "pool_seconds": 3.128229667000028,
+    "detail": {
+      "pricing_rounds": 1,
+      "average_pool_paths": 5.935,
+      "max_pool_paths": 10,
+      "first_feasible_k": 6,
+      "final_k": 10,
+      "history": [
+        {
+          "k": 1,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 7713.393399999999,
+          "paths": 600
+        },
+        {
+          "k": 2,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 2828.2301,
+          "paths": 1198
+        },
+        {
+          "k": 3,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 856.3550999999998,
+          "paths": 1780
+        },
+        {
+          "k": 4,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 375.8801000000001,
+          "paths": 2323
+        },
+        {
+          "k": 5,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 29.64000000000001,
+          "paths": 2778
+        },
+        {
+          "k": 6,
+          "feasible": true,
+          "objective": 225066.13050072006,
+          "demand_short": 0.0,
+          "paths": 3122
+        },
+        {
+          "k": 7,
+          "feasible": true,
+          "objective": 224346.87015691996,
+          "demand_short": 0.0,
+          "paths": 3356
+        },
+        {
+          "k": 8,
+          "feasible": true,
+          "objective": 224165.95401315982,
+          "demand_short": 0.0,
+          "paths": 3496
+        },
+        {
+          "k": 9,
+          "feasible": true,
+          "objective": 224134.18090155988,
+          "demand_short": 0.0,
+          "paths": 3553
+        },
+        {
+          "k": 10,
+          "feasible": true,
+          "objective": 224133.4468632099,
+          "demand_short": 0.0,
+          "paths": 3561
+        }
+      ]
+    }
+  },
+  {
+    "instance": "instance_hub_timewindow_middle",
+    "family": "hub",
+    "size": "middle",
+    "nodes": 150,
+    "arcs": 700,
+    "commodities": 600,
+    "method": "genetic",
+    "feasible": true,
+    "objective": 224472.9413563301,
+    "demand_short": 0.0,
+    "max_capacity_violation": 4.547473508864641e-13,
+    "max_time_violation": 0,
+    "seconds": 27.75139808399996,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 45.2611436258303,
+    "gap_percent": null,
+    "pool_seconds": 3.128229667000028,
+    "detail": {
+      "width": 6,
+      "runs": [
+        {
+          "seed": 42,
+          "feasible": true,
+          "objective": 224544.98276613996,
+          "demand_short": 0.0,
+          "seconds": 9.296836832999986,
+          "generations": 6
+        },
+        {
+          "seed": 43,
+          "feasible": true,
+          "objective": 224472.9413563301,
+          "demand_short": 0.0,
+          "seconds": 9.204444666999962,
+          "generations": 6
+        },
+        {
+          "seed": 44,
+          "feasible": true,
+          "objective": 224532.4129689001,
+          "demand_short": 0.0,
+          "seconds": 9.249578375000056,
+          "generations": 6
+        }
+      ],
+      "chosen_seed": 43
+    }
+  },
+  {
+    "instance": "instance_hub_timewindow_small",
+    "family": "hub",
+    "size": "small",
+    "nodes": 100,
+    "arcs": 400,
+    "commodities": 300,
+    "method": "k-neighborhood",
+    "feasible": true,
+    "objective": 110943.86610500005,
+    "demand_short": 0.0,
+    "max_capacity_violation": 4.547473508864641e-13,
+    "max_time_violation": 0,
+    "seconds": 0.35926516699998956,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 7.211016416084021,
+    "gap_percent": null,
+    "pool_seconds": 1.0039043340000262,
+    "detail": {
+      "pricing_rounds": 2,
+      "average_pool_paths": 5.12,
+      "max_pool_paths": 10,
+      "first_feasible_k": 7,
+      "final_k": 10,
+      "history": [
+        {
+          "k": 1,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 2987.2400000000002,
+          "paths": 300
+        },
+        {
+          "k": 2,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 937.1460000000001,
+          "paths": 598
+        },
+        {
+          "k": 3,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 511.36600000000004,
+          "paths": 873
+        },
+        {
+          "k": 4,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 76.60600000000001,
+          "paths": 1106
+        },
+        {
+          "k": 5,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 12.360000000000007,
+          "paths": 1291
+        },
+        {
+          "k": 6,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 5.1500000000000075,
+          "paths": 1422
+        },
+        {
+          "k": 7,
+          "feasible": true,
+          "objective": 111012.16598000005,
+          "demand_short": 0.0,
+          "paths": 1489
+        },
+        {
+          "k": 8,
+          "feasible": true,
+          "objective": 110974.70863900002,
+          "demand_short": 0.0,
+          "paths": 1520
+        },
+        {
+          "k": 9,
+          "feasible": true,
+          "objective": 110947.71989800004,
+          "demand_short": 0.0,
+          "paths": 1532
+        },
+        {
+          "k": 10,
+          "feasible": true,
+          "objective": 110943.86610500005,
+          "demand_short": 0.0,
+          "paths": 1536
+        }
+      ]
+    }
+  },
+  {
+    "instance": "instance_hub_timewindow_small",
+    "family": "hub",
+    "size": "small",
+    "nodes": 100,
+    "arcs": 400,
+    "commodities": 300,
+    "method": "genetic",
+    "feasible": true,
+    "objective": 110990.44150000004,
+    "demand_short": 0.0,
+    "max_capacity_violation": 2.2737367544323206e-13,
+    "max_time_violation": 0,
+    "seconds": 13.690183666999985,
+    "pte_status": "representation_limit",
+    "pte_objective": null,
+    "pte_recorded_seconds": 7.211016416084021,
+    "gap_percent": null,
+    "pool_seconds": 1.0039043340000262,
+    "detail": {
+      "width": 6,
+      "runs": [
+        {
+          "seed": 42,
+          "feasible": true,
+          "objective": 110995.72536099999,
+          "demand_short": 0.0,
+          "seconds": 4.588456583000038,
+          "generations": 8
+        },
+        {
+          "seed": 43,
+          "feasible": true,
+          "objective": 110999.75898900007,
+          "demand_short": 0.0,
+          "seconds": 4.516861082999981,
+          "generations": 8
+        },
+        {
+          "seed": 44,
+          "feasible": true,
+          "objective": 110990.44150000004,
+          "demand_short": 0.0,
+          "seconds": 4.58441449999998,
+          "generations": 8
+        }
+      ],
+      "chosen_seed": 44
+    }
+  },
+  {
+    "instance": "instance_random_timewindow_Large",
+    "family": "random",
+    "size": "Large",
+    "nodes": 200,
+    "arcs": 1000,
+    "commodities": 900,
+    "method": "k-neighborhood",
+    "feasible": true,
+    "objective": 375575.01049236517,
+    "demand_short": 0.0,
+    "max_capacity_violation": 8.100187187665142e-13,
+    "max_time_violation": 0,
+    "seconds": 7.373653208999997,
+    "pte_status": "Optimal",
+    "pte_objective": 373721.3996245446,
+    "pte_recorded_seconds": 238.8697694990551,
+    "gap_percent": 0.4959873503852803,
+    "pool_seconds": 4.68786458400001,
+    "detail": {
+      "pricing_rounds": 0,
+      "average_pool_paths": 4.825555555555556,
+      "max_pool_paths": 11,
+      "first_feasible_k": 4,
+      "final_k": 11,
+      "history": [
+        {
+          "k": 1,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 3957.8840000000014,
+          "paths": 900
+        },
+        {
+          "k": 2,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 999.2856057370559,
+          "paths": 1704
+        },
+        {
+          "k": 3,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 54.4315029924518,
+          "paths": 2407
+        },
+        {
+          "k": 4,
+          "feasible": true,
+          "objective": 379773.32637496514,
+          "demand_short": 0.0,
+          "paths": 3008
+        },
+        {
+          "k": 5,
+          "feasible": true,
+          "objective": 377773.9706058764,
+          "demand_short": 0.0,
+          "paths": 3506
+        },
+        {
+          "k": 6,
+          "feasible": true,
+          "objective": 376376.7656271897,
+          "demand_short": 0.0,
+          "paths": 3868
+        },
+        {
+          "k": 7,
+          "feasible": true,
+          "objective": 375816.4585357465,
+          "demand_short": 0.0,
+          "paths": 4114
+        },
+        {
+          "k": 8,
+          "feasible": true,
+          "objective": 375631.76899882447,
+          "demand_short": 0.0,
+          "paths": 4258
+        },
+        {
+          "k": 9,
+          "feasible": true,
+          "objective": 375579.31106758653,
+          "demand_short": 0.0,
+          "paths": 4321
+        },
+        {
+          "k": 10,
+          "feasible": true,
+          "objective": 375575.01049236517,
+          "demand_short": 0.0,
+          "paths": 4337
+        },
+        {
+          "k": 11,
+          "feasible": true,
+          "objective": 375575.01049236517,
+          "demand_short": 0.0,
+          "paths": 4343
+        }
+      ]
+    }
+  },
+  {
+    "instance": "instance_random_timewindow_Large",
+    "family": "random",
+    "size": "Large",
+    "nodes": 200,
+    "arcs": 1000,
+    "commodities": 900,
+    "method": "genetic",
+    "feasible": true,
+    "objective": 376376.7656271897,
+    "demand_short": 0.0,
+    "max_capacity_violation": 3.979039320256561e-13,
+    "max_time_violation": 0,
+    "seconds": 68.68621679200004,
+    "pte_status": "Optimal",
+    "pte_objective": 373721.3996245446,
+    "pte_recorded_seconds": 238.8697694990551,
+    "gap_percent": 0.7105201910601847,
+    "pool_seconds": 4.68786458400001,
+    "detail": {
+      "width": 6,
+      "runs": [
+        {
+          "seed": 42,
+          "feasible": true,
+          "objective": 376376.7656271897,
+          "demand_short": 0.0,
+          "seconds": 23.03906462499998,
+          "generations": 4
+        },
+        {
+          "seed": 43,
+          "feasible": true,
+          "objective": 376376.7656271897,
+          "demand_short": 0.0,
+          "seconds": 22.98677166600004,
+          "generations": 4
+        },
+        {
+          "seed": 44,
+          "feasible": true,
+          "objective": 376376.7656271897,
+          "demand_short": 0.0,
+          "seconds": 22.65988658399999,
+          "generations": 4
+        }
+      ],
+      "chosen_seed": 42
+    }
+  },
+  {
+    "instance": "instance_random_timewindow_middle",
+    "family": "random",
+    "size": "middle",
+    "nodes": 150,
+    "arcs": 700,
+    "commodities": 600,
+    "method": "k-neighborhood",
+    "feasible": true,
+    "objective": 244330.60279563986,
+    "demand_short": 0.0,
+    "max_capacity_violation": 3.694822225952521e-13,
+    "max_time_violation": 0,
+    "seconds": 2.358439709000038,
+    "pte_status": "Optimal",
+    "pte_objective": 243121.4155566484,
+    "pte_recorded_seconds": 86.67032679100521,
+    "gap_percent": 0.4973594104093714,
+    "pool_seconds": 2.0779073329999846,
+    "detail": {
+      "pricing_rounds": 0,
+      "average_pool_paths": 4.56,
+      "max_pool_paths": 11,
+      "first_feasible_k": 4,
+      "final_k": 11,
+      "history": [
+        {
+          "k": 1,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 2548.9875,
+          "paths": 600
+        },
+        {
+          "k": 2,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 710.3661490976217,
+          "paths": 1125
+        },
+        {
+          "k": 3,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 62.93536389876128,
+          "paths": 1574
+        },
+        {
+          "k": 4,
+          "feasible": true,
+          "objective": 247220.93157886926,
+          "demand_short": 0.0,
+          "paths": 1957
+        },
+        {
+          "k": 5,
+          "feasible": true,
+          "objective": 245482.5115558637,
+          "demand_short": 0.0,
+          "paths": 2258
+        },
+        {
+          "k": 6,
+          "feasible": true,
+          "objective": 244586.26658519675,
+          "demand_short": 0.0,
+          "paths": 2482
+        },
+        {
+          "k": 7,
+          "feasible": true,
+          "objective": 244396.23660153602,
+          "demand_short": 0.0,
+          "paths": 2624
+        },
+        {
+          "k": 8,
+          "feasible": true,
+          "objective": 244339.17836820398,
+          "demand_short": 0.0,
+          "paths": 2703
+        },
+        {
+          "k": 9,
+          "feasible": true,
+          "objective": 244330.60279563986,
+          "demand_short": 0.0,
+          "paths": 2726
+        },
+        {
+          "k": 10,
+          "feasible": true,
+          "objective": 244330.60279563986,
+          "demand_short": 0.0,
+          "paths": 2733
+        },
+        {
+          "k": 11,
+          "feasible": true,
+          "objective": 244330.60279563986,
+          "demand_short": 0.0,
+          "paths": 2736
+        }
+      ]
+    }
+  },
+  {
+    "instance": "instance_random_timewindow_middle",
+    "family": "random",
+    "size": "middle",
+    "nodes": 150,
+    "arcs": 700,
+    "commodities": 600,
+    "method": "genetic",
+    "feasible": true,
+    "objective": 244586.26658519675,
+    "demand_short": 0.0,
+    "max_capacity_violation": 1.5489831639570184e-12,
+    "max_time_violation": 0,
+    "seconds": 39.07290641700001,
+    "pte_status": "Optimal",
+    "pte_objective": 243121.4155566484,
+    "pte_recorded_seconds": 86.67032679100521,
+    "gap_percent": 0.6025183035375313,
+    "pool_seconds": 2.0779073329999846,
+    "detail": {
+      "width": 6,
+      "runs": [
+        {
+          "seed": 42,
+          "feasible": true,
+          "objective": 244586.26658519675,
+          "demand_short": 0.0,
+          "seconds": 13.140053124999952,
+          "generations": 6
+        },
+        {
+          "seed": 43,
+          "feasible": true,
+          "objective": 244586.26658519675,
+          "demand_short": 0.0,
+          "seconds": 12.626989374999994,
+          "generations": 6
+        },
+        {
+          "seed": 44,
+          "feasible": true,
+          "objective": 244586.26658519675,
+          "demand_short": 0.0,
+          "seconds": 13.305347958000027,
+          "generations": 6
+        }
+      ],
+      "chosen_seed": 42
+    }
+  },
+  {
+    "instance": "instance_random_timewindow_small",
+    "family": "random",
+    "size": "small",
+    "nodes": 100,
+    "arcs": 400,
+    "commodities": 300,
+    "method": "k-neighborhood",
+    "feasible": true,
+    "objective": 124255.35179562717,
+    "demand_short": 0.0,
+    "max_capacity_violation": 2.842170943040401e-14,
+    "max_time_violation": 0,
+    "seconds": 0.4604318749999834,
+    "pte_status": "Optimal",
+    "pte_objective": 123886.8906434401,
+    "pte_recorded_seconds": 19.64773483283352,
+    "gap_percent": 0.2974173863540893,
+    "pool_seconds": 0.5934405830000173,
+    "detail": {
+      "pricing_rounds": 0,
+      "average_pool_paths": 4.276666666666666,
+      "max_pool_paths": 11,
+      "first_feasible_k": 3,
+      "final_k": 11,
+      "history": [
+        {
+          "k": 1,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 1305.7320000000007,
+          "paths": 300
+        },
+        {
+          "k": 2,
+          "feasible": false,
+          "objective": null,
+          "demand_short": 370.3356139410187,
+          "paths": 556
+        },
+        {
+          "k": 3,
+          "feasible": true,
+          "objective": 127658.87398637312,
+          "demand_short": 0.0,
+          "paths": 782
+        },
+        {
+          "k": 4,
+          "feasible": true,
+          "objective": 125241.75022444033,
+          "demand_short": 0.0,
+          "paths": 966
+        },
+        {
+          "k": 5,
+          "feasible": true,
+          "objective": 124432.54526211252,
+          "demand_short": 0.0,
+          "paths": 1107
+        },
+        {
+          "k": 6,
+          "feasible": true,
+          "objective": 124327.16077231358,
+          "demand_short": 0.0,
+          "paths": 1199
+        },
+        {
+          "k": 7,
+          "feasible": true,
+          "objective": 124283.36353617029,
+          "demand_short": 0.0,
+          "paths": 1249
+        },
+        {
+          "k": 8,
+          "feasible": true,
+          "objective": 124255.5561443045,
+          "demand_short": 0.0,
+          "paths": 1272
+        },
+        {
+          "k": 9,
+          "feasible": true,
+          "objective": 124255.5561443045,
+          "demand_short": 0.0,
+          "paths": 1280
+        },
+        {
+          "k": 10,
+          "feasible": true,
+          "objective": 124255.35179562717,
+          "demand_short": 0.0,
+          "paths": 1282
+        },
+        {
+          "k": 11,
+          "feasible": true,
+          "objective": 124255.35179562717,
+          "demand_short": 0.0,
+          "paths": 1283
+        }
+      ]
+    }
+  },
+  {
+    "instance": "instance_random_timewindow_small",
+    "family": "random",
+    "size": "small",
+    "nodes": 100,
+    "arcs": 400,
+    "commodities": 300,
+    "method": "genetic",
+    "feasible": true,
+    "objective": 124327.16077231358,
+    "demand_short": 0.0,
+    "max_capacity_violation": 2.842170943040401e-14,
+    "max_time_violation": 0,
+    "seconds": 15.272902416000022,
+    "pte_status": "Optimal",
+    "pte_objective": 123886.8906434401,
+    "pte_recorded_seconds": 19.64773483283352,
+    "gap_percent": 0.3553807239707288,
+    "pool_seconds": 0.5934405830000173,
+    "detail": {
+      "width": 6,
+      "runs": [
+        {
+          "seed": 42,
+          "feasible": true,
+          "objective": 124327.16077231358,
+          "demand_short": 0.0,
+          "seconds": 5.152697708999995,
+          "generations": 8
+        },
+        {
+          "seed": 43,
+          "feasible": true,
+          "objective": 124327.16077231358,
+          "demand_short": 0.0,
+          "seconds": 5.069502708000016,
+          "generations": 8
+        },
+        {
+          "seed": 44,
+          "feasible": true,
+          "objective": 124327.16077231358,
+          "demand_short": 0.0,
+          "seconds": 5.050249542000017,
+          "generations": 8
+        }
+      ],
+      "chosen_seed": 42
+    }
+  }
+]

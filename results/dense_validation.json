@@ -1,0 +1,83 @@
+[
+  {
+    "instance": "instance_corridor_timewindow_Large",
+    "k": 97,
+    "objective_relative_difference": 0.0,
+    "dense_variables": 4562324,
+    "pte_variables": 2,
+    "dense_core_seconds": 11.032851792988367,
+    "pte_core_seconds": 0.0018540817545726895
+  },
+  {
+    "instance": "instance_corridor_timewindow_middle",
+    "k": 2,
+    "objective_relative_difference": 0.0,
+    "dense_variables": 3386588,
+    "pte_variables": 2,
+    "dense_core_seconds": 7.261119207949378,
+    "pte_core_seconds": 0.0014745830558240414
+  },
+  {
+    "instance": "instance_corridor_timewindow_small",
+    "k": 24,
+    "objective_relative_difference": 0.0,
+    "dense_variables": 1568424,
+    "pte_variables": 2,
+    "dense_core_seconds": 2.8226743328850716,
+    "pte_core_seconds": 0.0008275409927591681
+  },
+  {
+    "instance": "instance_hub_timewindow_Large",
+    "k": 634,
+    "objective_relative_difference": 0.0,
+    "dense_variables": 834593,
+    "pte_variables": 2,
+    "dense_core_seconds": 1.6980452509596944,
+    "pte_core_seconds": 0.0010613750200718641
+  },
+  {
+    "instance": "instance_hub_timewindow_middle",
+    "k": 557,
+    "objective_relative_difference": 1.4199973985135892e-16,
+    "dense_variables": 6279643,
+    "pte_variables": 3,
+    "dense_core_seconds": 14.09751120803412,
+    "pte_core_seconds": 0.001371749909594655
+  },
+  {
+    "instance": "instance_hub_timewindow_small",
+    "k": 128,
+    "objective_relative_difference": 0.0,
+    "dense_variables": 1527795,
+    "pte_variables": 5,
+    "dense_core_seconds": 2.7021430840250105,
+    "pte_core_seconds": 0.0009334989590570331
+  },
+  {
+    "instance": "instance_random_timewindow_Large",
+    "k": 348,
+    "objective_relative_difference": 0.0,
+    "dense_variables": 790013,
+    "pte_variables": 2,
+    "dense_core_seconds": 1.6814425399061292,
+    "pte_core_seconds": 0.0011142496950924397
+  },
+  {
+    "instance": "instance_random_timewindow_middle",
+    "k": 313,
+    "objective_relative_difference": 0.0,
+    "dense_variables": 1019222,
+    "pte_variables": 2,
+    "dense_core_seconds": 4.371229041018523,
+    "pte_core_seconds": 0.0013122489908710122
+  },
+  {
+    "instance": "instance_random_timewindow_small",
+    "k": 29,
+    "objective_relative_difference": 0.0,
+    "dense_variables": 368769,
+    "pte_variables": 2,
+    "dense_core_seconds": 0.7002115839859471,
+    "pte_core_seconds": 0.0007765010232105851
+  }
+]
